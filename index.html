@@ -104,7 +104,26 @@ h2{font-size:13px;margin:0 0 8px;color:var(--navy);text-transform:uppercase;lett
 .legalbox h4:first-child{margin-top:0}
 .scaleinline{display:inline-flex;gap:4px;vertical-align:middle;margin:0 4px}
 .scaleinline span{width:16px;height:16px;border-radius:4px;display:inline-block}
-@media(max-width:800px){.wrap{flex-direction:column;height:auto}#side{width:100%;border-right:none;border-bottom:1px solid var(--border)}#map{height:62vh}.brand .sub{display:none}}
+@media(max-width:800px){
+  .wrap{flex-direction:column;height:auto}
+  #side{width:100%;min-width:0;border-right:none;border-bottom:1px solid var(--border);order:2}
+  #mapcol{order:1}
+  #map{height:55vmax;min-height:320px}
+  .brand .sub{display:none}
+  .brand h1{font-size:14px}
+  .ctrlbar{padding:8px 12px;gap:8px}
+  select{min-width:0;width:100%;font-size:13px}
+  .field{flex:1}
+  header{padding:10px 14px;gap:8px}
+  .hactions{gap:8px}
+  .btn-about{font-size:11px;padding:6px 10px}
+  .tag{font-size:9px;padding:4px 9px}
+}
+@media(max-width:480px){
+  #map{height:60vmax;min-height:280px}
+  .bar .nm{width:90px;font-size:11.5px}
+  .bar .vl{width:60px;font-size:11.5px}
+}
 </style>
 </head>
 <body>
